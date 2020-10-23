@@ -12,6 +12,7 @@ namespace NovaRPG
 		std::string name;
 	public:
 		Scene(const std::string& name);
+		virtual ~Scene() {}
 
 		std::string getName();
 

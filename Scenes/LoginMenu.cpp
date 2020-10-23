@@ -11,6 +11,11 @@ NovaRPG::LoginMenu::LoginMenu() : Scene("Login menu")
 	);
 }
 
+NovaRPG::LoginMenu::~LoginMenu()
+{
+	if (loginMenu) delete loginMenu;
+}
+
 void NovaRPG::LoginMenu::draw(sf::RenderWindow* window)
 {
 	background.draw(window);

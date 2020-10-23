@@ -15,6 +15,7 @@ namespace NovaRPG
 		Tile background;
 	public:
 		LoginMenu();
+		~LoginMenu();
 
 		virtual void draw(sf::RenderWindow* window) override;
 	};

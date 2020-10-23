@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\Core">
+      <UniqueIdentifier>{9181dd4d-6562-4b32-851c-f3cabafd0a43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Scenes">
+      <UniqueIdentifier>{3a8a6a95-e2c8-44bc-a151-8d139aa9f42d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Graphics">
+      <UniqueIdentifier>{b7325799-1c14-462c-a2c6-98c737ca2c10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\UI">
+      <UniqueIdentifier>{53a1a28b-39f7-4ef5-86d5-3d5ad449b93c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Factories">
+      <UniqueIdentifier>{df951a83-ef21-48de-a868-759c0f857f37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\EventSystem">
+      <UniqueIdentifier>{9febf550-4f4c-4dff-9ec4-d13e92071129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Geometry">
+      <UniqueIdentifier>{2b55caf1-0796-4c8e-a80a-b39920b9093f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Network">
+      <UniqueIdentifier>{93a1faf9-f11d-496e-bdfb-8862e5dd91f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Application.cpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\GameSettings.cpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\Scene.cpp">
+      <Filter>Исходные файлы\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\SceneController.cpp">
+      <Filter>Исходные файлы\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\MainMenu.cpp">
+      <Filter>Исходные файлы\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Tile.cpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\TileMap.cpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Button.cpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Text.cpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Element.cpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Menu.cpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Factories\MainMenuFactory.cpp">
+      <Filter>Исходные файлы\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\GameObject.cpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="EventSystem\EventController.cpp">
+      <Filter>Исходные файлы\EventSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EventSystem\Event.cpp">
+      <Filter>Исходные файлы\EventSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Geometry.cpp">
+      <Filter>Исходные файлы\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Auth.cpp">
+      <Filter>Исходные файлы\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\LoginMenu.cpp">
+      <Filter>Исходные файлы\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Factories\LoginMenuFactory.cpp">
+      <Filter>Исходные файлы\Factories</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Application.hpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GameSettings.hpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\Scene.hpp">
+      <Filter>Исходные файлы\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\SceneController.hpp">
+      <Filter>Исходные файлы\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\MainMenu.hpp">
+      <Filter>Исходные файлы\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\IDrawable.hpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Tile.hpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\TileMap.hpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Button.hpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Text.hpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Element.hpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Menu.hpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Factories\MainMenuFactory.hpp">
+      <Filter>Исходные файлы\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GameObject.hpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ITransformable.hpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSystem\EventController.hpp">
+      <Filter>Исходные файлы\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSystem\EventType.hpp">
+      <Filter>Исходные файлы\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSystem\Event.hpp">
+      <Filter>Исходные файлы\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Geometry.hpp">
+      <Filter>Исходные файлы\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Auth.hpp">
+      <Filter>Исходные файлы\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\LoginMenu.hpp">
+      <Filter>Исходные файлы\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Factories\LoginMenuFactory.hpp">
+      <Filter>Исходные файлы\Factories</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -165,6 +165,7 @@
     <ClCompile Include="UI\Element.cpp" />
     <ClCompile Include="UI\Menu.cpp" />
     <ClCompile Include="UI\Text.cpp" />
+    <ClCompile Include="UI\TextBox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Application.hpp" />
@@ -189,6 +190,7 @@
     <ClInclude Include="UI\Element.hpp" />
     <ClInclude Include="UI\Menu.hpp" />
     <ClInclude Include="UI\Text.hpp" />
+    <ClInclude Include="UI\TextBox.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

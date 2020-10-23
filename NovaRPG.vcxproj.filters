@@ -99,6 +99,9 @@
     <ClCompile Include="Factories\LoginMenuFactory.cpp">
       <Filter>Исходные файлы\Factories</Filter>
     </ClCompile>
+    <ClCompile Include="UI\TextBox.cpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Application.hpp">
@@ -166,6 +169,9 @@
     </ClInclude>
     <ClInclude Include="Factories\LoginMenuFactory.hpp">
       <Filter>Исходные файлы\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\TextBox.hpp">
+      <Filter>Исходные файлы\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

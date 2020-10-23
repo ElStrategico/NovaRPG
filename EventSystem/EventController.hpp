@@ -25,6 +25,8 @@ namespace NovaRPG
 			GameObject* gameObject,
 			std::function<void(NovaRPG::Event&)> handler
 		);
+		
+		static void deleteForGameObject(GameObject* gameObject);
 
 		static void handle(sf::RenderWindow* window);
 	};

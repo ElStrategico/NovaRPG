@@ -15,6 +15,21 @@ void NovaRPG::EventController::registry(
 	eventMap[eventType][gameObject] = handler;
 }
 
+void NovaRPG::EventController::deleteForGameObject(GameObject* gameObject)
+{
+	for (auto &event : eventMap)
+	{
+		for (auto &handler : event.second)
+		{
+			if (handler.first == gameObject)
+			{
+				std::cout << "Delete event handler for game object - " << gameObject << std::endl;
+				event.second.erase(gameObject);
+			}
+		}
+	}
+}
+
 void NovaRPG::EventController::handle(sf::RenderWindow* window)
 {
 	sf::Event event;
@@ -30,12 +45,15 @@ void NovaRPG::EventController::handle(sf::RenderWindow* window)
 		{
 			if (event.mouseButton.button == sf::Mouse::Left)
 			{
-				for (auto handler : eventMap[EventType::ON_CLICK])
+				for (auto &handler : eventMap[EventType::ON_CLICK])
 				{
+					std::cout << "Event handler for game object - " << handler.first << std::endl;
+
 					if (Geometry::pointInGameObject(event.mouseButton.x, event.mouseButton.y, handler.first))
 					{
 						clientEvent.target = handler.first;
 						handler.second(clientEvent);
+						return;
 					}
 				}
 			}

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 #include <Core/ITransformable.hpp>
 
 namespace NovaRPG
@@ -9,6 +11,8 @@ namespace NovaRPG
 	private:
 		bool active = true;
 	public:
+		virtual ~GameObject();
+
 		bool isActive();
 		void setActive(bool value);
 	};

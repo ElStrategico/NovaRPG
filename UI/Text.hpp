@@ -15,15 +15,15 @@ namespace NovaRPG
 		sf::Text text;
 		sf::Font font;
 	public:
-		Text() {}
 		Text(
-			const std::string& text,
+			const std::string& text = "",
 			uint32_t size = 30,
 			const sf::Vector2f& position = sf::Vector2f(0.0f, 0.0f),
 			const sf::Color& color = sf::Color::White,
 			const std::string& font = "Assets/Fonts/Font.ttf"
 		);
 
+		virtual void setValue(const std::string& value) override;
 		void setCharacterSize(uint32_t size);
 		void setColor(const sf::Color& color);
 

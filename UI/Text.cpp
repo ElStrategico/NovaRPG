@@ -10,11 +10,17 @@ NovaRPG::Text::Text(
 {
 	this->font.loadFromFile(font);
 
-	this->text.setString(text);
+	setValue(text);
 	this->text.setCharacterSize(size);
 	this->text.setPosition(position);
 	this->text.setFillColor(color);
 	this->text.setFont(this->font);
+}
+
+void NovaRPG::Text::setValue(const std::string& value)
+{
+	text.setString(value);
+	this->value = value;
 }
 
 void NovaRPG::Text::setCharacterSize(uint32_t size)

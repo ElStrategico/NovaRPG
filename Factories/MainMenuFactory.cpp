@@ -1,6 +1,7 @@
 #include "MainMenuFactory.hpp"
 
 int NovaRPG::MainMenuFactory::itemCharacterSize = 50;
+float NovaRPG::MainMenuFactory::itemInvertal = 5.0f;
 
 NovaRPG::Menu* NovaRPG::MainMenuFactory::factory()
 {
@@ -23,7 +24,7 @@ NovaRPG::Menu* NovaRPG::MainMenuFactory::factory()
 		GameSettings::getScreenHeight() / 2.5
 	);
 
-	return new Menu(elements, position);
+	return new Menu(elements, position, itemInvertal);
 }
 
 std::function<void(NovaRPG::Event&)> NovaRPG::MainMenuFactory::onPlayClick()

@@ -17,6 +17,7 @@ namespace NovaRPG
 	{
 	private:
 		static int itemCharacterSize;
+		static float itemInvertal;
 
 		static std::function<void(Event&)> onPlayClick();
 		static std::function<void(Event&)> onSettingsClick();

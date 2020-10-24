@@ -1,10 +1,11 @@
 #include "LoginMenuFactory.hpp"
 
 int NovaRPG::LoginMenuFactory::itemCharacterSize = 50;
+float NovaRPG::LoginMenuFactory::itemInvertal = 5.0f;
 
 NovaRPG::Menu* NovaRPG::LoginMenuFactory::factory()
 {
-	TextBox* login = new TextBox(sf::Vector2f(300.0f, 30.0f));
+	TextBox* loginTextBox = new TextBox(sf::Vector2f(300.0f, 30.0f));
 	Button* loginButton = new Button("Login", itemCharacterSize);
 	Button* mainMenuButton = new Button("To main menu", itemCharacterSize);
 
@@ -12,7 +13,7 @@ NovaRPG::Menu* NovaRPG::LoginMenuFactory::factory()
 	EventController::registry(EventType::ON_CLICK, mainMenuButton, onMainMenuClick());
 
 	std::vector<Element*> elements = {
-		login,
+		loginTextBox,
 		loginButton,
 		mainMenuButton
 	};
@@ -22,7 +23,7 @@ NovaRPG::Menu* NovaRPG::LoginMenuFactory::factory()
 		GameSettings::getScreenHeight() / 2.5
 	);
 
-	return new Menu(elements, position);
+	return new Menu(elements, position, itemInvertal);
 }
 
 std::function<void(NovaRPG::Event&)> NovaRPG::LoginMenuFactory::onLoginClick()

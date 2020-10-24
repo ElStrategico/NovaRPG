@@ -6,6 +6,7 @@
 
 #include <SFML/Graphics.hpp>
 
+#include <UI/TextBox.hpp>
 #include <Core/GameObject.hpp>
 #include <Geometry/Geometry.hpp>
 #include <EventSystem/Event.hpp>
@@ -22,9 +23,13 @@ namespace NovaRPG
 		static NovaRPG::Event clientEvent;
 
 		static EventMap eventMap;
-
+		
+		static void handleKeyEvent(sf::RenderWindow* window);
 		static void handleMouseEvent(sf::RenderWindow* window);
+		static void handleTextEnteredEvent(sf::RenderWindow* window);
 	public:
+		static TextBox* currentEditable;
+
 		static void registry(
 			const EventType& eventType,
 			GameObject* gameObject,

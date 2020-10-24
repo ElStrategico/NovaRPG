@@ -5,6 +5,8 @@ NovaRPG::Event NovaRPG::EventController::clientEvent = NovaRPG::Event();
 
 NovaRPG::EventMap NovaRPG::EventController::eventMap = {};
 
+NovaRPG::TextBox* NovaRPG::EventController::currentEditable = nullptr;
+
 void NovaRPG::EventController::registry(
 	const EventType& eventType, 
 	GameObject* gameObject, 
@@ -33,6 +35,17 @@ void NovaRPG::EventController::deleteForGameObject(GameObject* gameObject)
 	}
 }
 
+void NovaRPG::EventController::handleKeyEvent(sf::RenderWindow* window)
+{
+	if (currentEditable)
+	{
+		if (coreEvent.key.code == sf::Keyboard::BackSpace)
+		{
+			currentEditable->eraseLast();
+		}
+	}
+}
+
 void NovaRPG::EventController::handleMouseEvent(sf::RenderWindow* window)
 {
 	if (coreEvent.mouseButton.button == sf::Mouse::Left)
@@ -51,6 +64,16 @@ void NovaRPG::EventController::handleMouseEvent(sf::RenderWindow* window)
 	}
 }
 
+void NovaRPG::EventController::handleTextEnteredEvent(sf::RenderWindow* window)
+{
+	if (currentEditable)
+	{
+		if (coreEvent.text.unicode == 8) return;
+
+		currentEditable->appendValue(coreEvent.text.unicode);
+	}
+}
+
 void NovaRPG::EventController::handle(sf::RenderWindow* window)
 {
 	clientEvent.window = window;
@@ -62,9 +85,17 @@ void NovaRPG::EventController::handle(sf::RenderWindow* window)
 			window->close();
 		}
 
+		if (coreEvent.type == sf::Event::KeyPressed)
+		{
+			handleKeyEvent(window);
+		}
 		if (coreEvent.type == sf::Event::MouseButtonPressed)
 		{
 			handleMouseEvent(window);
+		}
+		if (coreEvent.type == sf::Event::TextEntered)
+		{
+			handleTextEnteredEvent(window);
 		}
 	}
 }

@@ -2,14 +2,20 @@
 
 #include <EventSystem/EventController.hpp>
 
-NovaRPG::TextBox::TextBox(const sf::Vector2f& size, const sf::Vector2f& position) : text(Text())
+NovaRPG::TextBox::TextBox(
+	const sf::Vector2f& size,
+	const std::string placeholder,
+	const sf::Vector2f& position
+) : text(Text()), placeholder(placeholder)
 {
+	setValue(placeholder);
 	text.setColor(sf::Color::Black);
 
 	setSize(size);
 	setPosition(position);
 
 	EventController::registry(EventType::ON_CLICK, this, [&](Event& event) {
+		setValue("");
 		EventController::currentEditable = this;
 	});
 }

@@ -11,10 +11,12 @@ namespace NovaRPG
 	{
 	private:
 		Text text;
+		std::string placeholder;
 		sf::RectangleShape textBox;
 	public:
 		TextBox(
-			const sf::Vector2f& size, 
+			const sf::Vector2f& size,
+			const std::string placeholder = "",
 			const sf::Vector2f& position = sf::Vector2f(0.0f, 0.0f)
 		);
 

@@ -11,6 +11,7 @@ namespace NovaRPG
 
 		GameObject* target;
 
+		Event() {}
 		Event(sf::RenderWindow* window);
 	};
 }

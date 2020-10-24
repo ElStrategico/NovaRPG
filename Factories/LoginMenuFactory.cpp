@@ -6,6 +6,9 @@ float NovaRPG::LoginMenuFactory::itemInvertal = 5.0f;
 NovaRPG::Menu* NovaRPG::LoginMenuFactory::factory()
 {
 	TextBox* loginTextBox = new TextBox(sf::Vector2f(300.0f, 30.0f));
+	loginTextBox->addTag(GameTags::loginInput);
+	loginTextBox->setValue("Login");
+
 	Button* loginButton = new Button("Login", itemCharacterSize);
 	Button* mainMenuButton = new Button("To main menu", itemCharacterSize);
 
@@ -23,13 +26,24 @@ NovaRPG::Menu* NovaRPG::LoginMenuFactory::factory()
 		GameSettings::getScreenHeight() / 2.5
 	);
 
-	return new Menu(elements, position, itemInvertal);
+	Menu* menu = new Menu(elements, position, itemInvertal);
+	menu->addTag(GameTags::loginMenu);
+	
+	return menu;
 }
 
 std::function<void(NovaRPG::Event&)> NovaRPG::LoginMenuFactory::onLoginClick()
 {
 	return [](Event& event) {
-		std::cout << "Login" << std::endl;
+		GameObject* gameObject = SceneController::getCurrent()->findGameObjectByTag(GameTags::loginMenu);
+		
+		if (gameObject)
+		{
+			Menu* menu = (Menu*)gameObject;
+			GameObject* loginInput = menu->findChildByTag(GameTags::loginInput);
+
+			std::cout << loginInput->getValue() << std::endl;
+		}
 	};
 }
 

@@ -6,6 +6,7 @@
 #include <UI/Menu.hpp>
 #include <UI/Button.hpp>
 #include <UI/TextBox.hpp>
+#include <Core/GameTags.hpp>
 #include <Scenes/MainMenu.hpp>
 #include <Core/GameSettings.hpp>
 #include <Scenes/SceneController.hpp>

@@ -1,5 +1,8 @@
 #include "EventController.hpp"
 
+sf::Event NovaRPG::EventController::coreEvent;
+NovaRPG::Event NovaRPG::EventController::clientEvent = NovaRPG::Event();
+
 NovaRPG::EventMap NovaRPG::EventController::eventMap = {};
 
 void NovaRPG::EventController::registry(
@@ -30,33 +33,38 @@ void NovaRPG::EventController::deleteForGameObject(GameObject* gameObject)
 	}
 }
 
+void NovaRPG::EventController::handleMouseEvent(sf::RenderWindow* window)
+{
+	if (coreEvent.mouseButton.button == sf::Mouse::Left)
+	{
+		for (auto& handler : eventMap[EventType::ON_CLICK])
+		{
+			std::cout << "Event handler for game object - " << handler.first << std::endl;
+
+			if (Geometry::pointInGameObject(coreEvent.mouseButton.x, coreEvent.mouseButton.y, handler.first))
+			{
+				clientEvent.target = handler.first;
+				handler.second(clientEvent);
+				return;
+			}
+		}
+	}
+}
+
 void NovaRPG::EventController::handle(sf::RenderWindow* window)
 {
-	sf::Event event;
-	NovaRPG::Event clientEvent(window);
+	clientEvent.window = window;
 
-	while (window->pollEvent(event))
+	while (window->pollEvent(coreEvent))
 	{
-		if (event.type == sf::Event::Closed)
+		if (coreEvent.type == sf::Event::Closed)
 		{
 			window->close();
 		}
-		if (event.type == sf::Event::MouseButtonPressed)
-		{
-			if (event.mouseButton.button == sf::Mouse::Left)
-			{
-				for (auto &handler : eventMap[EventType::ON_CLICK])
-				{
-					std::cout << "Event handler for game object - " << handler.first << std::endl;
 
-					if (Geometry::pointInGameObject(event.mouseButton.x, event.mouseButton.y, handler.first))
-					{
-						clientEvent.target = handler.first;
-						handler.second(clientEvent);
-						return;
-					}
-				}
-			}
+		if (coreEvent.type == sf::Event::MouseButtonPressed)
+		{
+			handleMouseEvent(window);
 		}
 	}
 }

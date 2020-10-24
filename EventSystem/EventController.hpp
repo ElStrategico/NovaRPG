@@ -18,7 +18,12 @@ namespace NovaRPG
 	class EventController
 	{
 	private:
+		static sf::Event coreEvent;
+		static NovaRPG::Event clientEvent;
+
 		static EventMap eventMap;
+
+		static void handleMouseEvent(sf::RenderWindow* window);
 	public:
 		static void registry(
 			const EventType& eventType,

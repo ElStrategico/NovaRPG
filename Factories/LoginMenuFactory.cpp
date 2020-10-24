@@ -7,7 +7,9 @@ NovaRPG::Menu* NovaRPG::LoginMenuFactory::factory()
 {
 	TextBox* loginTextBox = new TextBox(sf::Vector2f(300.0f, 30.0f));
 	loginTextBox->addTag(GameTags::loginInput);
-	loginTextBox->setValue("Login");
+
+	TextBox* passwordTextBox = new TextBox(sf::Vector2f(300.0f, 30.0f));
+	passwordTextBox->addTag(GameTags::passwordInput);
 
 	Button* loginButton = new Button("Login", itemCharacterSize);
 	Button* mainMenuButton = new Button("To main menu", itemCharacterSize);
@@ -17,6 +19,7 @@ NovaRPG::Menu* NovaRPG::LoginMenuFactory::factory()
 
 	std::vector<Element*> elements = {
 		loginTextBox,
+		passwordTextBox,
 		loginButton,
 		mainMenuButton
 	};
@@ -41,8 +44,10 @@ std::function<void(NovaRPG::Event&)> NovaRPG::LoginMenuFactory::onLoginClick()
 		{
 			Menu* menu = (Menu*)gameObject;
 			GameObject* loginInput = menu->findChildByTag(GameTags::loginInput);
+			GameObject* passwordInput = menu->findChildByTag(GameTags::passwordInput);
 
-			std::cout << loginInput->getValue() << std::endl;
+			std::cout << "Login - " << loginInput->getValue() << std::endl;
+			std::cout << "Password - " << passwordInput->getValue() << std::endl;
 		}
 	};
 }

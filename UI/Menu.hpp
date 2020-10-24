@@ -9,6 +9,7 @@ namespace NovaRPG
 	class Menu : public Element
 	{
 	private:
+		float interval = 0.0f;
 		std::vector<Element*> items;
 
 		void normalizeByPosition(sf::Vector2f position);
@@ -16,7 +17,8 @@ namespace NovaRPG
 		Menu() {}
 		Menu(
 			const std::vector<Element*> items, 
-			const sf::Vector2f& position = sf::Vector2f(0.0f, 0.0f)
+			const sf::Vector2f& position = sf::Vector2f(0.0f, 0.0f),
+			float interval = 0.0f
 		);
 		~Menu();
 

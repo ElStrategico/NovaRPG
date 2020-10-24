@@ -1,6 +1,11 @@
 #include "Menu.hpp"
 
-NovaRPG::Menu::Menu(const std::vector<Element*> items, const sf::Vector2f& position) : items(items)
+NovaRPG::Menu::Menu(
+	const std::vector<Element*> items, 
+	const sf::Vector2f& position,
+	float interval
+) 
+: items(items), interval(interval)
 {
 	setPosition(position);
 }
@@ -18,7 +23,7 @@ void NovaRPG::Menu::normalizeByPosition(sf::Vector2f position)
 	for (auto item : items)
 	{
 		item->setPosition(position);
-		position.y += item->getSize().height;
+		position.y += item->getSize().height + interval;
 	}
 }
 

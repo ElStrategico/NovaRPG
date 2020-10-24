@@ -18,6 +18,19 @@ NovaRPG::Menu::~Menu()
 	}
 }
 
+NovaRPG::GameObject* NovaRPG::Menu::findChildByTag(const std::string& tag)
+{
+	for (auto& item : items)
+	{
+		if (item->existsTag(tag))
+		{
+			return item;
+		}
+	}
+
+	return nullptr;
+}
+
 void NovaRPG::Menu::normalizeByPosition(sf::Vector2f position)
 {
 	for (auto item : items)

@@ -22,6 +22,8 @@ namespace NovaRPG
 		);
 		~Menu();
 
+		GameObject* findChildByTag(const std::string& tag);
+
 		virtual sf::FloatRect getSize() override;
 		virtual void setSize(const sf::Vector2f& size) override;
 

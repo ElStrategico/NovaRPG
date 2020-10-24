@@ -102,6 +102,15 @@
     <ClCompile Include="UI\TextBox.cpp">
       <Filter>Исходные файлы\UI</Filter>
     </ClCompile>
+    <ClCompile Include="Factories\TileFactory.cpp">
+      <Filter>Исходные файлы\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Tag.cpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\GameTags.cpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Application.hpp">
@@ -172,6 +181,15 @@
     </ClInclude>
     <ClInclude Include="UI\TextBox.hpp">
       <Filter>Исходные файлы\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Factories\TileFactory.hpp">
+      <Filter>Исходные файлы\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Tag.hpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GameTags.hpp">
+      <Filter>Исходные файлы\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

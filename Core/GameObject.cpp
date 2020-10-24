@@ -5,6 +5,10 @@
 NovaRPG::GameObject::~GameObject()
 {
 	EventController::deleteForGameObject(this);
+	if (EventController::currentEditable == this)
+	{
+		EventController::currentEditable = nullptr;
+	}
 }
 
 void NovaRPG::GameObject::addTag(const std::string& name)

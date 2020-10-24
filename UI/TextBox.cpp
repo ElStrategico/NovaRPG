@@ -15,9 +15,14 @@ NovaRPG::TextBox::TextBox(
 	setPosition(position);
 
 	EventController::registry(EventType::ON_CLICK, this, [&](Event& event) {
-		setValue("");
+		setEmptyValue();
 		EventController::currentEditable = this;
 	});
+}
+
+void NovaRPG::TextBox::setEmptyValue()
+{
+	setValue("");
 }
 
 void NovaRPG::TextBox::setValue(const std::string& value)

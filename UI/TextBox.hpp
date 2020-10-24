@@ -20,6 +20,7 @@ namespace NovaRPG
 			const sf::Vector2f& position = sf::Vector2f(0.0f, 0.0f)
 		);
 
+		void setEmptyValue();
 		virtual void setValue(const std::string& value) override;
 		void appendValue(char symbol);
 		void eraseLast();

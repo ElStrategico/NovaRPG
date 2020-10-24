@@ -19,6 +19,8 @@ namespace NovaRPG
 		);
 
 		virtual void setValue(const std::string& value) override;
+		void appendValue(char symbol);
+		void eraseLast();
 
 		virtual sf::FloatRect getSize() override;
 		virtual void setSize(const sf::Vector2f& size) override;

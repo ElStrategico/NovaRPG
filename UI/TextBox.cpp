@@ -1,17 +1,37 @@
 #include "TextBox.hpp"
 
+#include <EventSystem/EventController.hpp>
+
 NovaRPG::TextBox::TextBox(const sf::Vector2f& size, const sf::Vector2f& position) : text(Text())
 {
 	text.setColor(sf::Color::Black);
 
 	setSize(size);
 	setPosition(position);
+
+	EventController::registry(EventType::ON_CLICK, this, [&](Event& event) {
+		EventController::currentEditable = this;
+	});
 }
 
 void NovaRPG::TextBox::setValue(const std::string& value)
 {
-	text.setValue(value);
 	this->value = value;
+	text.setValue(value);
+}
+
+void NovaRPG::TextBox::appendValue(char symbol)
+{
+	this->value += symbol;
+	text.setValue(value);
+}
+
+void NovaRPG::TextBox::eraseLast()
+{
+	if (!value.empty())
+	{
+		setValue(value.substr(0, value.size() - 1));
+	}
 }
 
 sf::FloatRect NovaRPG::TextBox::getSize()

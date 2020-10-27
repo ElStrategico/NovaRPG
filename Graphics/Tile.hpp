@@ -10,7 +10,7 @@
 
 namespace NovaRPG
 {
-	class Tile : public GameObject, public IDrawable
+	class Tile : public GameObject
 	{
 	private:
 		NovaRPG::Sprite sprite;
@@ -21,8 +21,8 @@ namespace NovaRPG
 		void load(const std::string& path);
 
 		virtual sf::FloatRect getSize() override;
-		void setSize(float width, float height);
 		virtual void setSize(const sf::Vector2f& size) override;
+		void setSize(float width, float height);
 
 		virtual sf::Vector2f getPosition() override;
 		virtual void move(const sf::Vector2f& position) override;

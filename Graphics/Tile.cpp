@@ -15,29 +15,34 @@ sf::FloatRect NovaRPG::Tile::getSize()
 	return sf::FloatRect();
 }
 
-void NovaRPG::Tile::setSize(float width, float height)
+void NovaRPG::Tile::setSize(const sf::Vector2f& size)
 {
 	sprite.get()->setScale(
-		width  / sprite.get()->getLocalBounds().width,
-		height / sprite.get()->getLocalBounds().height
+		size.x / sprite.get()->getLocalBounds().width,
+		size.y / sprite.get()->getLocalBounds().height
 	);
 }
 
-void NovaRPG::Tile::setSize(const sf::Vector2f& size)
+void NovaRPG::Tile::setSize(float width, float height)
 {
+	sf::Vector2f position(width, height);
+
+	setSize(position);
 }
 
 sf::Vector2f NovaRPG::Tile::getPosition()
 {
-	return sf::Vector2f();
+	return sprite.get()->getPosition();
 }
 
 void NovaRPG::Tile::move(const sf::Vector2f& position)
 {
+	sprite.get()->move(position);
 }
 
 void NovaRPG::Tile::setPosition(const sf::Vector2f& position)
 {
+	sprite.get()->setPosition(position);
 }
 
 void NovaRPG::Tile::draw(sf::RenderWindow* window)

@@ -19,3 +19,14 @@ std::string NovaRPG::GameSettings::getHost()
 {
     return "http://nova-rpg.local";
 }
+
+sf::Vector2f NovaRPG::GameSettings::getDefaultTileSize()
+{
+    const int columns = 16;
+    const int rows = 16;
+
+    return sf::Vector2f(
+        getScreenWidth()  / columns,
+        getScreenHeight() / rows
+    );
+}

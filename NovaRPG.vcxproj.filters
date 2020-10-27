@@ -37,6 +37,15 @@
     <Filter Include="Исходные файлы\Network">
       <UniqueIdentifier>{93a1faf9-f11d-496e-bdfb-8862e5dd91f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Helpers">
+      <UniqueIdentifier>{0ca89810-1577-4896-acc8-3b1760dd1992}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\IO">
+      <UniqueIdentifier>{fe544974-e95d-4e80-adb7-8618ef970b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Models">
+      <UniqueIdentifier>{def584ce-26bc-4c7d-9b3f-8105a9418d0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -110,6 +119,27 @@
     </ClCompile>
     <ClCompile Include="Core\GameTags.cpp">
       <Filter>Исходные файлы\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\StringHelper.cpp">
+      <Filter>Исходные файлы\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\Registry.cpp">
+      <Filter>Исходные файлы\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\RegistryKey.cpp">
+      <Filter>Исходные файлы\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Sprite.cpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Model.cpp">
+      <Filter>Исходные файлы\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\User.cpp">
+      <Filter>Исходные файлы\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\HTTPClient.cpp">
+      <Filter>Исходные файлы\Network</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +220,30 @@
     </ClInclude>
     <ClInclude Include="Core\GameTags.hpp">
       <Filter>Исходные файлы\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\TextBoxType.hpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\StringHelper.hpp">
+      <Filter>Исходные файлы\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\Registry.hpp">
+      <Filter>Исходные файлы\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\RegistryKey.hpp">
+      <Filter>Исходные файлы\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Sprite.hpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Model.hpp">
+      <Filter>Исходные файлы\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\User.hpp">
+      <Filter>Исходные файлы\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\HTTPClient.hpp">
+      <Filter>Исходные файлы\Network</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

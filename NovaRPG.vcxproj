@@ -94,7 +94,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-network.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -113,7 +113,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-network.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -156,10 +156,17 @@
     <ClCompile Include="Factories\MainMenuFactory.cpp" />
     <ClCompile Include="Factories\TileFactory.cpp" />
     <ClCompile Include="Geometry\Geometry.cpp" />
+    <ClCompile Include="Graphics\Sprite.cpp" />
     <ClCompile Include="Graphics\Tile.cpp" />
     <ClCompile Include="Graphics\TileMap.cpp" />
+    <ClCompile Include="Helpers\StringHelper.cpp" />
+    <ClCompile Include="IO\Registry.cpp" />
+    <ClCompile Include="IO\RegistryKey.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Models\Model.cpp" />
+    <ClCompile Include="Models\User.cpp" />
     <ClCompile Include="Network\Auth.cpp" />
+    <ClCompile Include="Network\HTTPClient.cpp" />
     <ClCompile Include="Scenes\MainMenu.cpp" />
     <ClCompile Include="Scenes\LoginMenu.cpp" />
     <ClCompile Include="Scenes\Scene.cpp" />
@@ -185,9 +192,16 @@
     <ClInclude Include="Factories\MainMenuFactory.hpp" />
     <ClInclude Include="Factories\TileFactory.hpp" />
     <ClInclude Include="Geometry\Geometry.hpp" />
+    <ClInclude Include="Graphics\Sprite.hpp" />
     <ClInclude Include="Graphics\Tile.hpp" />
     <ClInclude Include="Graphics\TileMap.hpp" />
+    <ClInclude Include="Helpers\StringHelper.hpp" />
+    <ClInclude Include="IO\Registry.hpp" />
+    <ClInclude Include="IO\RegistryKey.hpp" />
+    <ClInclude Include="Models\Model.hpp" />
+    <ClInclude Include="Models\User.hpp" />
     <ClInclude Include="Network\Auth.hpp" />
+    <ClInclude Include="Network\HTTPClient.hpp" />
     <ClInclude Include="Scenes\MainMenu.hpp" />
     <ClInclude Include="Scenes\LoginMenu.hpp" />
     <ClInclude Include="Scenes\Scene.hpp" />
@@ -197,6 +211,7 @@
     <ClInclude Include="UI\Menu.hpp" />
     <ClInclude Include="UI\Text.hpp" />
     <ClInclude Include="UI\TextBox.hpp" />
+    <ClInclude Include="UI\TextBoxType.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

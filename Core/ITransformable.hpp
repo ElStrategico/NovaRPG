@@ -7,6 +7,8 @@ namespace NovaRPG
 	class ITransformable
 	{
 	public:
+		virtual ~ITransformable() {}
+
 		virtual sf::FloatRect getSize() = 0;
 		virtual void setSize(const sf::Vector2f& size) = 0;
 

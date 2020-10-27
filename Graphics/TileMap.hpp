@@ -1,17 +1,33 @@
 #pragma once
 
 #include <string>
+#include <vector>
 #include <fstream>
+#include <iostream>
+
+#include <Core/IDrawable.hpp>
+#include <Core/GameSettings.hpp>
+#include <Graphics/TileAssociation.hpp>
 
 namespace NovaRPG
 {
-	class TileMap
+	class TileMap : public IDrawable
 	{
 	private:
-		std::ifstream tileMap;
-	public:
-		TileMap(const std::string& path);
+		std::vector<Tile*> tiles;
 
-		std::string getColumn();
+		std::ifstream tileMap;
+		TileAssociation tileAssociation;
+
+		void instantiate();
+	public:
+		TileMap(
+			const std::string& path,
+			TileAssociation& tileAssociation
+		);
+
+		std::string getRow();
+
+		virtual void draw(sf::RenderWindow* window) override;
 	};
 }

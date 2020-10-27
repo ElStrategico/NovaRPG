@@ -141,6 +141,15 @@
     <ClCompile Include="Network\HTTPClient.cpp">
       <Filter>Исходные файлы\Network</Filter>
     </ClCompile>
+    <ClCompile Include="Graphics\TileAssociation.cpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\Market.cpp">
+      <Filter>Исходные файлы\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Factories\MarketFactory.cpp">
+      <Filter>Исходные файлы\Factories</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Application.hpp">
@@ -244,6 +253,15 @@
     </ClInclude>
     <ClInclude Include="Network\HTTPClient.hpp">
       <Filter>Исходные файлы\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\TileAssociation.hpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\Market.hpp">
+      <Filter>Исходные файлы\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Factories\MarketFactory.hpp">
+      <Filter>Исходные файлы\Factories</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

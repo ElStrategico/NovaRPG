@@ -154,10 +154,12 @@
     <ClCompile Include="EventSystem\EventController.cpp" />
     <ClCompile Include="Factories\LoginMenuFactory.cpp" />
     <ClCompile Include="Factories\MainMenuFactory.cpp" />
+    <ClCompile Include="Factories\MarketFactory.cpp" />
     <ClCompile Include="Factories\TileFactory.cpp" />
     <ClCompile Include="Geometry\Geometry.cpp" />
     <ClCompile Include="Graphics\Sprite.cpp" />
     <ClCompile Include="Graphics\Tile.cpp" />
+    <ClCompile Include="Graphics\TileAssociation.cpp" />
     <ClCompile Include="Graphics\TileMap.cpp" />
     <ClCompile Include="Helpers\StringHelper.cpp" />
     <ClCompile Include="IO\Registry.cpp" />
@@ -169,6 +171,7 @@
     <ClCompile Include="Network\HTTPClient.cpp" />
     <ClCompile Include="Scenes\MainMenu.cpp" />
     <ClCompile Include="Scenes\LoginMenu.cpp" />
+    <ClCompile Include="Scenes\Market.cpp" />
     <ClCompile Include="Scenes\Scene.cpp" />
     <ClCompile Include="Scenes\SceneController.cpp" />
     <ClCompile Include="UI\Button.cpp" />
@@ -190,10 +193,12 @@
     <ClInclude Include="EventSystem\EventType.hpp" />
     <ClInclude Include="Factories\LoginMenuFactory.hpp" />
     <ClInclude Include="Factories\MainMenuFactory.hpp" />
+    <ClInclude Include="Factories\MarketFactory.hpp" />
     <ClInclude Include="Factories\TileFactory.hpp" />
     <ClInclude Include="Geometry\Geometry.hpp" />
     <ClInclude Include="Graphics\Sprite.hpp" />
     <ClInclude Include="Graphics\Tile.hpp" />
+    <ClInclude Include="Graphics\TileAssociation.hpp" />
     <ClInclude Include="Graphics\TileMap.hpp" />
     <ClInclude Include="Helpers\StringHelper.hpp" />
     <ClInclude Include="IO\Registry.hpp" />
@@ -204,6 +209,7 @@
     <ClInclude Include="Network\HTTPClient.hpp" />
     <ClInclude Include="Scenes\MainMenu.hpp" />
     <ClInclude Include="Scenes\LoginMenu.hpp" />
+    <ClInclude Include="Scenes\Market.hpp" />
     <ClInclude Include="Scenes\Scene.hpp" />
     <ClInclude Include="Scenes\SceneController.hpp" />
     <ClInclude Include="UI\Button.hpp" />

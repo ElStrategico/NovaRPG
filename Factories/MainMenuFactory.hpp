@@ -22,7 +22,11 @@ namespace NovaRPG
 		static std::function<void(Event&)> onPlayClick();
 		static std::function<void(Event&)> onSettingsClick();
 		static std::function<void(Event&)> onExitClick();
+
+		static std::function<void(Event&)> onProfileClick();
+		static std::function<void(Event&)> onLogoutClick();
 	public:
 		static Menu* factory();
+		static Menu* factoryProfileMenu();
 	};
 }

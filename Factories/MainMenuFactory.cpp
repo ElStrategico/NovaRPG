@@ -27,12 +27,32 @@ NovaRPG::Menu* NovaRPG::MainMenuFactory::factory()
 	return new Menu(elements, position, itemInvertal);
 }
 
+NovaRPG::Menu* NovaRPG::MainMenuFactory::factoryProfileMenu()
+{
+	Menu* menu = new Menu(itemInvertal);
+
+	if (Auth::isUser())
+	{
+		Button* profileButton = new Button(Auth::getName(), itemCharacterSize);
+		Button* logoutButton = new Button("Logout", itemCharacterSize);
+
+		EventController::registry(EventType::ON_CLICK, profileButton, onProfileClick());
+		EventController::registry(EventType::ON_CLICK, logoutButton, onLogoutClick());
+
+		menu->addItem(profileButton);
+		menu->addItem(logoutButton);
+	}
+
+	return menu;
+}
+
 std::function<void(NovaRPG::Event&)> NovaRPG::MainMenuFactory::onPlayClick()
 {
 	if (Auth::isUser())
 	{
 		return [](Event& event) {
-			std::cout << "Play user" << std::endl;
+			User authUser = Auth::user();
+			std::cout << authUser.getName() << std::endl;
 		};
 	}
 	return [](Event& event) {
@@ -51,5 +71,19 @@ std::function<void(NovaRPG::Event&)> NovaRPG::MainMenuFactory::onExitClick()
 {
 	return [](Event& event) {
 		event.window->close();
+	};
+}
+
+std::function<void(NovaRPG::Event&)> NovaRPG::MainMenuFactory::onProfileClick()
+{
+	return [](Event& event) {
+		std::cout << "Profile" << std::endl;
+	};
+}
+
+std::function<void(NovaRPG::Event&)> NovaRPG::MainMenuFactory::onLogoutClick()
+{
+	return [](Event& event) {
+		std::cout << "Logout" << std::endl;
 	};
 }

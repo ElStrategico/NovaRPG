@@ -51,8 +51,7 @@ std::function<void(NovaRPG::Event&)> NovaRPG::MainMenuFactory::onPlayClick()
 	if (Auth::isUser())
 	{
 		return [](Event& event) {
-			User authUser = Auth::user();
-			std::cout << authUser.getName() << std::endl;
+			SceneController::switchScene(new Market());
 		};
 	}
 	return [](Event& event) {

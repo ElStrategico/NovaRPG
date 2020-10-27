@@ -6,6 +6,7 @@
 #include <UI/Menu.hpp>
 #include <UI/Button.hpp>
 #include <Network/Auth.hpp>
+#include <Scenes/Market.hpp>
 #include <Scenes/LoginMenu.hpp>
 #include <Core/GameSettings.hpp>
 #include <Scenes/SceneController.hpp>

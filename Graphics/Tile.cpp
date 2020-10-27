@@ -7,8 +7,7 @@ NovaRPG::Tile::Tile(const std::string& path)
 
 void NovaRPG::Tile::load(const std::string& path)
 {
-	texture.loadFromFile(path);
-	tile.setTexture(texture);
+	sprite.set(path);
 }
 
 sf::FloatRect NovaRPG::Tile::getSize()
@@ -18,9 +17,9 @@ sf::FloatRect NovaRPG::Tile::getSize()
 
 void NovaRPG::Tile::setSize(float width, float height)
 {
-	tile.setScale(
-		width / tile.getLocalBounds().width,
-		height / tile.getLocalBounds().height
+	sprite.get()->setScale(
+		width  / sprite.get()->getLocalBounds().width,
+		height / sprite.get()->getLocalBounds().height
 	);
 }
 
@@ -43,5 +42,5 @@ void NovaRPG::Tile::setPosition(const sf::Vector2f& position)
 
 void NovaRPG::Tile::draw(sf::RenderWindow* window)
 {
-	window->draw(tile);
+	sprite.draw(window);
 }

@@ -6,14 +6,14 @@
 
 #include <Core/IDrawable.hpp>
 #include <Core/GameObject.hpp>
+#include <Graphics/Sprite.hpp>
 
 namespace NovaRPG
 {
 	class Tile : public GameObject, public IDrawable
 	{
 	private:
-		sf::Sprite tile;
-		sf::Texture texture;
+		NovaRPG::Sprite sprite;
 	public:
 		Tile() {}
 		Tile(const std::string& path);

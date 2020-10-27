@@ -1,5 +1,10 @@
 #include "Menu.hpp"
 
+NovaRPG::Menu::Menu(float interval) : interval(interval)
+{
+
+}
+
 NovaRPG::Menu::Menu(
 	const std::vector<Element*> items, 
 	const sf::Vector2f& position,
@@ -16,6 +21,19 @@ NovaRPG::Menu::~Menu()
 	{
 		if (item) delete item;
 	}
+}
+
+void NovaRPG::Menu::addItem(Element* element)
+{
+	if (!items.empty())
+	{
+		sf::Vector2f position = items.back()->getPosition();
+		position.y += items.back()->getSize().height + interval;
+		
+		element->setPosition(position);
+	}
+
+	items.push_back(element);
 }
 
 NovaRPG::GameObject* NovaRPG::Menu::findChildByTag(const std::string& tag)

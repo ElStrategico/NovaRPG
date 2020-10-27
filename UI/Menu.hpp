@@ -15,12 +15,15 @@ namespace NovaRPG
 		void normalizeByPosition(sf::Vector2f position);
 	public:
 		Menu() {}
+		Menu(float interval);
 		Menu(
 			const std::vector<Element*> items, 
 			const sf::Vector2f& position = sf::Vector2f(0.0f, 0.0f),
 			float interval = 0.0f
 		);
 		~Menu();
+
+		void addItem(Element* element);
 
 		GameObject* findChildByTag(const std::string& tag);
 

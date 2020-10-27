@@ -4,6 +4,8 @@
 
 #include <UI/Text.hpp>
 #include <UI/Element.hpp>
+#include <UI/TextBoxType.hpp>
+#include <Helpers/StringHelper.hpp>
 
 namespace NovaRPG
 {
@@ -11,12 +13,14 @@ namespace NovaRPG
 	{
 	private:
 		Text text;
+		TextBoxType type;
 		std::string placeholder;
 		sf::RectangleShape textBox;
 	public:
 		TextBox(
 			const sf::Vector2f& size,
-			const std::string placeholder = "",
+			const std::string& placeholder = "",
+			const TextBoxType& type = TextBoxType::TEXT,
 			const sf::Vector2f& position = sf::Vector2f(0.0f, 0.0f)
 		);
 

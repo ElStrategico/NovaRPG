@@ -4,9 +4,10 @@
 
 NovaRPG::TextBox::TextBox(
 	const sf::Vector2f& size,
-	const std::string placeholder,
+	const std::string& placeholder,
+	const TextBoxType& type,
 	const sf::Vector2f& position
-) : text(Text()), placeholder(placeholder)
+) : type(type), text(Text()), placeholder(placeholder)
 {
 	setValue(placeholder);
 	text.setColor(sf::Color::Black);
@@ -28,7 +29,14 @@ void NovaRPG::TextBox::setEmptyValue()
 void NovaRPG::TextBox::setValue(const std::string& value)
 {
 	this->value = value;
-	text.setValue(value);
+	std::string textValue = value;
+
+	if (type == TextBoxType::PASSWORD)
+	{
+		textValue = StringHelper::replaceAll(value, '*');
+	}
+
+	text.setValue(textValue);
 }
 
 void NovaRPG::TextBox::appendValue(char symbol)

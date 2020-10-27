@@ -1,12 +1,16 @@
 #include "Scene.hpp"
 
-NovaRPG::Scene::Scene(const std::string& name) : name(name)
+#include <Graphics/TileMap.hpp>
+
+NovaRPG::Scene::Scene(const std::string& name, TileMap* tileMap) : name(name), tileMap(tileMap)
 {
     
 }
 
 NovaRPG::Scene::~Scene()
 {
+	if (tileMap) delete tileMap;
+
 	for (auto& gameObject : gameObjects)
 	{
 		if (gameObject) delete gameObject;
@@ -38,6 +42,11 @@ NovaRPG::GameObject* NovaRPG::Scene::findGameObjectByTag(const std::string& tag)
 
 void NovaRPG::Scene::draw(sf::RenderWindow* window)
 {
+	if (tileMap)
+	{
+		tileMap->draw(window);
+	}
+
 	for (auto& gameObject : gameObjects)
 	{
 		if (gameObject->isActive())

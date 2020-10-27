@@ -3,19 +3,22 @@
 #include <string>
 #include <vector>
 
-#include <Core/IDrawable.hpp>
 #include <Core/GameObject.hpp>
 
 namespace NovaRPG
 {
+	class TileMap;
+
 	class Scene : public IDrawable
 	{
-	private:
-		std::string name;
 	protected:
+		std::string name;
+		
+		TileMap* tileMap;
+
 		std::vector<GameObject*> gameObjects;
 	public:
-		Scene(const std::string& name);
+		Scene(const std::string& name, TileMap* tileMap = nullptr);
 		virtual ~Scene();
 
 		std::string getName();

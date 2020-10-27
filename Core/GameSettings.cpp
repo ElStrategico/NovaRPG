@@ -14,3 +14,8 @@ NovaRPG::Scene* NovaRPG::GameSettings::getDefaultScene()
 {
     return new MainMenu();
 }
+
+std::string NovaRPG::GameSettings::getHost()
+{
+    return "http://nova-rpg.local";
+}

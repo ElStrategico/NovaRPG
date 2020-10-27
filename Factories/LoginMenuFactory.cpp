@@ -8,7 +8,7 @@ NovaRPG::Menu* NovaRPG::LoginMenuFactory::factory()
 	TextBox* loginTextBox = new TextBox(sf::Vector2f(300.0f, 30.0f), "Login");
 	loginTextBox->addTag(GameTags::loginInput);
 
-	TextBox* passwordTextBox = new TextBox(sf::Vector2f(300.0f, 30.0f), "Password");
+	TextBox* passwordTextBox = new TextBox(sf::Vector2f(300.0f, 30.0f), "Password", TextBoxType::PASSWORD);
 	passwordTextBox->addTag(GameTags::passwordInput);
 
 	Button* loginButton = new Button("Login", itemCharacterSize);

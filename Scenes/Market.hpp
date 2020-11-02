@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Scenes/Scene.hpp>
-#include <Factories/MarketFactory.hpp>
+#include <IO/SceneFile.hpp>
 
 namespace NovaRPG
 {

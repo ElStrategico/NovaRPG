@@ -145,6 +145,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera\Camera.cpp" />
+    <ClCompile Include="Characters\Character.cpp" />
     <ClCompile Include="Core\Application.cpp" />
     <ClCompile Include="Core\GameObject.cpp" />
     <ClCompile Include="Core\GameSettings.cpp" />
@@ -155,6 +157,7 @@
     <ClCompile Include="Factories\LoginMenuFactory.cpp" />
     <ClCompile Include="Factories\MainMenuFactory.cpp" />
     <ClCompile Include="Factories\MarketFactory.cpp" />
+    <ClCompile Include="Factories\PropFactory.cpp" />
     <ClCompile Include="Factories\TileFactory.cpp" />
     <ClCompile Include="Geometry\Geometry.cpp" />
     <ClCompile Include="Graphics\Sprite.cpp" />
@@ -164,11 +167,18 @@
     <ClCompile Include="Helpers\StringHelper.cpp" />
     <ClCompile Include="IO\Registry.cpp" />
     <ClCompile Include="IO\RegistryKey.cpp" />
+    <ClCompile Include="IO\SceneFile.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Models\Model.cpp" />
     <ClCompile Include="Models\User.cpp" />
     <ClCompile Include="Network\Auth.cpp" />
     <ClCompile Include="Network\HTTPClient.cpp" />
+    <ClCompile Include="Props\BlueTree.cpp" />
+    <ClCompile Include="Props\Prop.cpp" />
+    <ClCompile Include="Props\PropController.cpp" />
+    <ClCompile Include="Props\PropsMap.cpp" />
+    <ClCompile Include="Props\RedTree.cpp" />
+    <ClCompile Include="Props\WoodenHouse.cpp" />
     <ClCompile Include="Scenes\MainMenu.cpp" />
     <ClCompile Include="Scenes\LoginMenu.cpp" />
     <ClCompile Include="Scenes\Market.cpp" />
@@ -179,8 +189,14 @@
     <ClCompile Include="UI\Menu.cpp" />
     <ClCompile Include="UI\Text.cpp" />
     <ClCompile Include="UI\TextBox.cpp" />
+    <ClCompile Include="Vendor\TinyXML\tinystr.cpp" />
+    <ClCompile Include="Vendor\TinyXML\tinyxml.cpp" />
+    <ClCompile Include="Vendor\TinyXML\tinyxmlerror.cpp" />
+    <ClCompile Include="Vendor\TinyXML\tinyxmlparser.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera\Camera.hpp" />
+    <ClInclude Include="Characters\Character.hpp" />
     <ClInclude Include="Core\Application.hpp" />
     <ClInclude Include="Core\GameObject.hpp" />
     <ClInclude Include="Core\GameSettings.hpp" />
@@ -194,6 +210,7 @@
     <ClInclude Include="Factories\LoginMenuFactory.hpp" />
     <ClInclude Include="Factories\MainMenuFactory.hpp" />
     <ClInclude Include="Factories\MarketFactory.hpp" />
+    <ClInclude Include="Factories\PropFactory.hpp" />
     <ClInclude Include="Factories\TileFactory.hpp" />
     <ClInclude Include="Geometry\Geometry.hpp" />
     <ClInclude Include="Graphics\Sprite.hpp" />
@@ -203,10 +220,18 @@
     <ClInclude Include="Helpers\StringHelper.hpp" />
     <ClInclude Include="IO\Registry.hpp" />
     <ClInclude Include="IO\RegistryKey.hpp" />
+    <ClInclude Include="IO\SceneFile.hpp" />
     <ClInclude Include="Models\Model.hpp" />
     <ClInclude Include="Models\User.hpp" />
     <ClInclude Include="Network\Auth.hpp" />
     <ClInclude Include="Network\HTTPClient.hpp" />
+    <ClInclude Include="Props\BlueTree.hpp" />
+    <ClInclude Include="Props\Includes.hpp" />
+    <ClInclude Include="Props\Prop.hpp" />
+    <ClInclude Include="Props\PropController.hpp" />
+    <ClInclude Include="Props\PropsMap.hpp" />
+    <ClInclude Include="Props\RedTree.hpp" />
+    <ClInclude Include="Props\WoodenHouse.hpp" />
     <ClInclude Include="Scenes\MainMenu.hpp" />
     <ClInclude Include="Scenes\LoginMenu.hpp" />
     <ClInclude Include="Scenes\Market.hpp" />
@@ -218,6 +243,8 @@
     <ClInclude Include="UI\Text.hpp" />
     <ClInclude Include="UI\TextBox.hpp" />
     <ClInclude Include="UI\TextBoxType.hpp" />
+    <ClInclude Include="Vendor\TinyXML\tinystr.h" />
+    <ClInclude Include="Vendor\TinyXML\tinyxml.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

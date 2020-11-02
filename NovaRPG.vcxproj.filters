@@ -46,6 +46,18 @@
     <Filter Include="Исходные файлы\Models">
       <UniqueIdentifier>{def584ce-26bc-4c7d-9b3f-8105a9418d0c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Props">
+      <UniqueIdentifier>{095fa46f-392a-45a9-8bc9-469851885958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Camera">
+      <UniqueIdentifier>{04f9ac8c-2b95-4854-a51b-2ad4fd6e5b19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Character">
+      <UniqueIdentifier>{c65918a0-edc4-4ac5-a268-38e85d447a31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Vendor">
+      <UniqueIdentifier>{e4756fee-c2af-442c-ad2a-7a1cb9ce4cbd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -148,6 +160,48 @@
       <Filter>Исходные файлы\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="Factories\MarketFactory.cpp">
+      <Filter>Исходные файлы\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Props\Prop.cpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\Camera.cpp">
+      <Filter>Исходные файлы\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Characters\Character.cpp">
+      <Filter>Исходные файлы\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Props\BlueTree.cpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClCompile>
+    <ClCompile Include="Props\RedTree.cpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClCompile>
+    <ClCompile Include="Props\WoodenHouse.cpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\TinyXML\tinystr.cpp">
+      <Filter>Исходные файлы\Vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\TinyXML\tinyxml.cpp">
+      <Filter>Исходные файлы\Vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\TinyXML\tinyxmlerror.cpp">
+      <Filter>Исходные файлы\Vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\TinyXML\tinyxmlparser.cpp">
+      <Filter>Исходные файлы\Vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\SceneFile.cpp">
+      <Filter>Исходные файлы\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Props\PropsMap.cpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClCompile>
+    <ClCompile Include="Props\PropController.cpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClCompile>
+    <ClCompile Include="Factories\PropFactory.cpp">
       <Filter>Исходные файлы\Factories</Filter>
     </ClCompile>
   </ItemGroup>
@@ -261,6 +315,45 @@
       <Filter>Исходные файлы\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="Factories\MarketFactory.hpp">
+      <Filter>Исходные файлы\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="Props\Prop.hpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\Camera.hpp">
+      <Filter>Исходные файлы\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Characters\Character.hpp">
+      <Filter>Исходные файлы\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Props\BlueTree.hpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="Props\RedTree.hpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="Props\WoodenHouse.hpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\TinyXML\tinystr.h">
+      <Filter>Исходные файлы\Vendor</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\TinyXML\tinyxml.h">
+      <Filter>Исходные файлы\Vendor</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\SceneFile.hpp">
+      <Filter>Исходные файлы\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Props\Includes.hpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="Props\PropsMap.hpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="Props\PropController.hpp">
+      <Filter>Исходные файлы\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="Factories\PropFactory.hpp">
       <Filter>Исходные файлы\Factories</Filter>
     </ClInclude>
   </ItemGroup>

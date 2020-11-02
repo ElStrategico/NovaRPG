@@ -1,11 +1,14 @@
 #include "TileMap.hpp"
 
-NovaRPG::TileMap::TileMap(const std::string& path, TileAssociation& tileAssociation) :
-tileAssociation(tileAssociation)
+NovaRPG::TileMap::TileMap(const std::string& tileMap, TileAssociation& tileAssociation) :
+tileMap(tileMap), tileAssociation(tileAssociation)
 {
-	tileMap.open(path);
-
 	instantiate();
+}
+
+NovaRPG::Tile* NovaRPG::TileMap::getTile(int index)
+{
+	return tiles[index];
 }
 
 void NovaRPG::TileMap::instantiate()
@@ -14,10 +17,8 @@ void NovaRPG::TileMap::instantiate()
 	sf::Vector2f currentPosition;
 	sf::Vector2f tileSize = GameSettings::getDefaultTileSize();
 
-	while (!tileMap.eof())
+	while (!(row = getRow()).empty())
 	{
-		row = getRow();
-		
 		for (auto& key : row)
 		{
 			Tile* tile = tileAssociation.find(key);
@@ -41,7 +42,15 @@ void NovaRPG::TileMap::instantiate()
 std::string NovaRPG::TileMap::getRow()
 {
 	std::string column;
-	tileMap >> column;
+	while (currentTileMapIndex < tileMap.size())
+	{
+		char symbol = tileMap[currentTileMapIndex];
+		currentTileMapIndex++;
+
+		if (symbol == ' ') break;
+
+		column += symbol;
+	}
 
 	return column;
 }

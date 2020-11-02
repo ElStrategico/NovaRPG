@@ -16,15 +16,18 @@ namespace NovaRPG
 	private:
 		std::vector<Tile*> tiles;
 
-		std::ifstream tileMap;
+		std::string tileMap;
+		int currentTileMapIndex = 0;
 		TileAssociation tileAssociation;
 
 		void instantiate();
 	public:
 		TileMap(
-			const std::string& path,
+			const std::string& tileMap,
 			TileAssociation& tileAssociation
 		);
+
+		Tile* getTile(int index);
 
 		std::string getRow();
 

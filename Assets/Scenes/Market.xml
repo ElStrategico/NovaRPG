@@ -1,0 +1,46 @@
+<Scene>
+<TileMap>
+ggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+gggggggggwttegggggggggggggggggggggggggggggggggggggggggggg
+ggggggggglsorgggggggggggggggggggggggggggggggggggggggggggg
+ggggggggglsorgggggggggggggggggggggggggggggggggggggggggggg
+ggggggggglsorgggggggggggggggggggggggggggggggggggggggggggg
+ggggggggglssrgggggggggggggggggggggggggggggggggggggggggggg
+ggggggggglosrgggggggggggggggggggggggggggggggggggggggggggg
+ggggggggglosrgggggggggggggggggggggggggggggggggggggggggggg
+ggggggggglosrgggggggggggggggggggggggggggggggggggggggggggg
+tttttttttsssrgggggggggggggggggggggggggggggggggggggggggggg
+sssssooossssrgggggggggggggggggggggggggggggggggggggggggggg
+sooossssssssrgggggggggggggggggggggggggggggggggggggggggggg
+bbbbbbbbbbbbqgggggggggggggggggggggggggggggggggggggggggggg
+ggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+</TileMap>
+<Tiles>
+    <Tile key="s" path="Assets/Tiles/Sand.png"></Tile>
+    <Tile key="g" path="Assets/Tiles/Grass.png"></Tile>
+    <Tile key="t" path="Assets/Tiles/SandTop.png"></Tile>
+    <Tile key="l" path="Assets/Tiles/SandLeft.png"></Tile>
+    <Tile key="r" path="Assets/Tiles/SandRight.png"></Tile>
+    <Tile key="b" path="Assets/Tiles/SandBottom.png"></Tile>
+    <Tile key="w" path="Assets/Tiles/SandLeftTop.png"></Tile>
+    <Tile key="e" path="Assets/Tiles/SandTopRight.png"></Tile>
+    <Tile key="o" path="Assets/Tiles/SandWithStone.png"></Tile>
+    <Tile key="q" path="Assets/Tiles/SandRightBottom.png"></Tile>
+</Tiles>
+<Props>
+    <Prop name="BlueTree" index="61" eventable="1"></Prop>
+    <Prop name="BlueTree" index="62" eventable="1"></Prop>
+    <Prop name="BlueTree" index="63" eventable="1"></Prop>
+    <Prop name="BlueTree" index="118" eventable="1"></Prop>
+    <Prop name="BlueTree" index="119" eventable="1"></Prop>
+    <Prop name="RedTree" index="120" eventable="1"></Prop>
+    <Prop name="BlueTree" index="175" eventable="1"></Prop>
+    <Prop name="RedTree" index="176" eventable="1"></Prop>
+    <Prop name="RedTree" index="177" eventable="1"></Prop>
+    <Prop name="WoodenHouse" index="232" eventable="1"></Prop>
+</Props>
+</Scene>

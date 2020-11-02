@@ -42,10 +42,8 @@ NovaRPG::GameObject* NovaRPG::Scene::findGameObjectByTag(const std::string& tag)
 
 void NovaRPG::Scene::draw(sf::RenderWindow* window)
 {
-	if (tileMap)
-	{
-		tileMap->draw(window);
-	}
+	if (tileMap) tileMap->draw(window);
+	if (propsMap) propsMap->draw(window);
 
 	for (auto& gameObject : gameObjects)
 	{

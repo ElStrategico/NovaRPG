@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 
+#include <Props/PropsMap.hpp>
 #include <Core/GameObject.hpp>
 
 namespace NovaRPG
@@ -15,6 +16,8 @@ namespace NovaRPG
 		std::string name;
 		
 		TileMap* tileMap;
+
+		PropsMap* propsMap;
 
 		std::vector<GameObject*> gameObjects;
 	public:

@@ -2,18 +2,20 @@
 
 NovaRPG::TileMap* NovaRPG::MarketFactory::factoryTileMap()
 {
-	TileAssociation tileAssociation;
+	std::map<char, std::string> tiles = {
+		{'s', "Assets/Tiles/Sand.png"},
+		{'g', "Assets/Tiles/Grass.png"},
+		{'t', "Assets/Tiles/SandTop.png"},
+		{'l', "Assets/Tiles/SandLeft.png"},
+		{'r', "Assets/Tiles/SandRight.png"},
+		{'b', "Assets/Tiles/SandBottom.png"},
+		{'w', "Assets/Tiles/SandLeftTop.png"},
+		{'e', "Assets/Tiles/SandTopRight.png"},
+		{'o', "Assets/Tiles/SandWithStone.png"},
+		{'q', "Assets/Tiles/SandRightBottom.png"}
+	};
 
-	tileAssociation.add('s', "Assets/Tiles/Sand.png");
-	tileAssociation.add('g', "Assets/Tiles/Grass.png");
-	tileAssociation.add('t', "Assets/Tiles/SandTop.png");
-	tileAssociation.add('l', "Assets/Tiles/SandLeft.png");
-	tileAssociation.add('r', "Assets/Tiles/SandRight.png");
-	tileAssociation.add('b', "Assets/Tiles/SandBottom.png");
-	tileAssociation.add('w', "Assets/Tiles/SandLeftTop.png");
-	tileAssociation.add('e', "Assets/Tiles/SandTopRight.png");
-	tileAssociation.add('o', "Assets/Tiles/SandWithStone.png");
-	tileAssociation.add('q', "Assets/Tiles/SandRightBottom.png");
+	TileAssociation tileAssociation(tiles);
 
 	return new TileMap("Assets/TileMaps/Market.txt", tileAssociation);
 }
